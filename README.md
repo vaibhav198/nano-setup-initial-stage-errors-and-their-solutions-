@@ -16,5 +16,15 @@ Now, you need to set the static ip. So how to setup static ip----
 3. Now you will get nmcli prompt, now run ```print ipv4```
 4. Now run ```set ipv4.addresses 192.168.1.1/16```
 5. now ```save```
-6. ```ctrl+d```
+6. ```ctrl+d``` to come out from nmcli prompt
+Now, reboot the nano.
+
+# 3. If you trying to run the pipeline on newly setuped nano and your pipeline is getting killed then you need to do following things
+1. See the output of ```free -m``` and then ```df -h``` Now you can see, not enough swap memory.
+2. two things to do---
+2.a: ```sudo vim /etc/systemd/nvzramconfig.sh``` . Here try to find out the line, starting with mem=$... . In that line try to remove / 2.
+2.b: Once 2.a is done, then pull https://github.com/JetsonHacksNano/installSwapfile this repo. ```git clone https://github.com/JetsonHacksNano/installSwapfile```
+2.c: After pulling the repo, go to the directory 'installSwapfile'. from within that directory, run: ```sudo ./installSwapFile.sh```
+2.d: Now reboot the nano
+
 
