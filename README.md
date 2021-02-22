@@ -29,8 +29,8 @@ Now, reboot the nano.
 
 
 # Some additional information
--> nano has two power mode one is 5W and other one 10W.
--> to set power mode one can use ```sudo nvpmodel -m 0``` for 10W and ```sudo nvpmodel -m 1``` for 5W.
+-> nano has two power mode one is 5W and other one 10W. <br>
+-> to set power mode one can use ```sudo nvpmodel -m 0``` for 10W and ```sudo nvpmodel -m 1``` for 5W. <br>
 -> to enable clock one can run ```sudo jetson_clocks``` or one can do this with ```jtop``` (to run ```jtop```, you need to install jetson stats, to install it run ```sudo pip3 install -U jetson-stats```, in jtop goto 5th window and press ```s``` to enable jetson clocks and press ```e``` to enable it automatically on boot time.
 
 
